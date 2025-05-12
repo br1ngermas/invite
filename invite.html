@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Приглашение для Дианы</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Общие стили */
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      margin: 0 0 10px;
+      font-weight: 600;
+      color: #222;
+    }
+    p {
+      margin: 0 0 15px;
+    }
+    .block {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    /* 1. Приветствие */
+    .block.greeting h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+    .block.greeting p {
+      text-align: center;
+      font-size: 16px;
+    }
+    /* 2. Ты мне нравишься */
+    .block.liking h2 {
+      font-size: 20px;
+    }
+    /* 3. Казус с Instagram */
+    .block.casus h2 {
+      font-size: 20px;
+    }
+    /* 4. Дорожная карта */
+    .roadmap {
+      counter-reset: step;
+    }
+    .roadmap .step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+    .roadmap .step::before {
+      counter-increment: step;
+      content: counter(step);
+      flex: none;
+      width: 28px; height: 28px;
+      margin-right: 12px;
+      background-color: #ff69b4;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 28px;
+      font-weight: bold;
+    }
+    .roadmap .step strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #222;
+    }
+    /* 5. Закрывающий блок */
+    .block.closing p {
+      font-size: 15px;
+    }
+    /* Кнопка */
+    .cta {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #ff69b4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .cta a:hover {
+      background-color: #e0488f;
+    }
+    /* Адаптация для мобильных */
+    @media (max-width: 480px) {
+      body {
+        padding: 15px;
+      }
+      .block {
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      .cta a {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 1. Приветствие -->
+    <section class="block greeting">
+      <h1>Привет, Диана!</h1>
+      <p>Я Марат Аблаев. Надеюсь, у тебя всё хорошо.</p>
+      <p>Очень хочется, чтобы этот маленький знак вызвал у тебя больше улыбок, чем дискомфорта. 😊</p>
+    </section>
+
+    <!-- 2. Ты мне нравишься -->
+    <section class="block liking">
+      <h2>Про что это?</h2>
+      <p>Если честно, я чувствую себя глупцом, который молчал слишком долго, но все таки скажу: Диана, ты мне нравишься. Ты классная, и я хотел бы узнать тебя лучше. 🌸</p>
+    </section>
+
+    <!-- 3. Казус с Instagram -->
+    <section class="block casus">
+      <h2>Казус с Instagram</h2>
+      <p>Мы еще даже не пообщались, я уже косякнул:) это про инстаграм, да я имел грех смотреть твои сторисы с левого акка(я тормоз), и заблочился мой мейн акк:), я не знаю обратила ли ты на это внимание, но да это супер странно.</p>
+      <p>Я вроде не имею никаких наклонностей:) ну это к тому, чтоб ты там не подумала лишнего, ты мне нравишься, только это 🌸</p>
+    </section>
+
+    <!-- 4. Дорожная карта -->
+    <section class="block roadmap">
+      <h2>Мое предложение на твое действие</h2>
+      <div class="step">
+        <div>
+          <strong>Приглашаю на кофе или поедим мяса:)</strong>
+          Ты разблокируешь меня в Instagram(@marablayev)
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <strong>Приглашаю на концерт, кино или театр</strong>
+          Напиши мне в <a href="https://t.me/marablayev?text=Hi!" target="_blank">Telegram</a>.
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <strong>Переписка «по-старинке»</strong>
+          Обменяемся письмами, как в XIX веке. Пиши любой текст в email: <code>marablayev@gmail.com</code>.
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <strong>Дальше — как пойдёт</strong>
+          Вариантов много. Один из них — ты улыбаешься, читая это сейчас.
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Закрывающий блок -->
+    <section class="block closing">
+      <p>Конечно, ты можешь отказаться — вполне возможно, что я тебе не нравлюсь. Но, пожалуйста, дай шанс хотя бы на пару встреч.</p>
+      <p>Ты точно ничего не потеряешь: минимум — хороший друг, а максимум — нечто большее.</p>
+      <p>Хорошего дня и теплоты в душе! 😊</p>
+    </section>
+
+    <!-- Кнопка -->
+    <div class="cta">
+      <a href="https://t.me/marablayev" target="_blank">Написать в Telegram</a>
+    </div>
+
+  </div>
+</body>
+</html>
