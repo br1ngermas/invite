@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Секретный вход</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Базовые стили */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .wrapper {
+      width: 90%;
+      max-width: 360px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    /* Инпут */
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 90%;
+      padding: 14px 16px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      outline: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    input:focus {
+      border-color: #ff69b4;
+      box-shadow: 0 2px 8px rgba(255,105,180,0.2);
+    }
+
+    /* Кнопка */
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      background-color: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #e0488f;
+    }
+
+    /* Сообщение об ошибке */
+    .error {
+      color: #d33;
+      font-size: 14px;
+      margin-top: 10px;
+      min-height: 18px;
+    }
+
+    /* Нижний текст */
+    .footer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Диана, привет! Доступ только для тебя 🌸</h1>
+    <p></p>
+    <p>Введи день рождения Ерболата(твой старший брат🙂), в формате дд.мм.гггг</p>
+
+    <div class="input-group">
+        <input type="text" id="codeInput" placeholder="Например, 25.01.1994">
+    </div>
+    <button onclick="checkCode()">Войти</button>
+    <div class="error" id="errorMessage"></div>
+
+    <div class="footer">Если ты здесь — значит, кое-что точно сработало 🙂</div>
+  </div>
+
+  <script>
+    // Проверка кода
+    function checkCode() {
+      const input = document.getElementById("codeInput").value.trim();
+      const correct = "09.04.1994"; // ЗАМЕНИ НА НАСТОЯЩУЮ ДАТУ
+      const error = document.getElementById("errorMessage");
+      if (input === correct) {
+        window.location.href = "invite.html";
+      } else {
+        error.textContent = "Неверный код. Подумай ещё.";
+      }
+    }
+  </script>
+</body>
+</html>
